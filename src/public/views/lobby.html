@@ -1,0 +1,36 @@
+﻿<section id="lobby">
+	<div class="insideFolder">
+		<h2>Lobby</h2>
+		<ul data-bind="with: getStatistics">
+			<li>Conectados: <en data-bind="text: connected"></en></li>
+			<li>Disponíveis: <en data-bind="text: available"></en></li>
+			<li>Aguardando: <en data-bind="text: waiting"></en></li>
+			<li>Jogando: <en data-bind="text: playing"></en></li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Conectado desde</th>
+					<th>Status</th>
+					<th>Pontuação</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: getConnectedPlayers">
+				<tr>
+					<td data-bind="text: name"></td>
+					<td data-bind="text: connectedSinse"></td>
+					<td data-bind="text: status"></td>
+					<td data-bind="text: score"></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<button data-bind="enable: canPlay, click: play">Jogar</button>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</section>

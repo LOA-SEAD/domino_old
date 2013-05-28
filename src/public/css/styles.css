@@ -1,0 +1,290 @@
+html, body, div, p, section, h1, h2, h3, h4, h5, h6, a, button
+{
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;	
+
+	font-family: "Courier";	
+
+	/*Fazendo o html não ser selecionavel*/
+	/*-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;*/
+
+	outline: none;
+}
+/*
+button
+{
+	padding:5px;
+	background-color: #dcdcdc; 
+	border: 1px solid #666; 
+	color:#000; 
+	text-decoration:none;
+}
+*/
+ul {
+	list-style-type: none;
+}
+
+body {
+	background-color: #CCD;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas
+{
+	background: url(../imgs/fundo.png);
+	position: relative;
+	
+	width: 800px;
+	height: 600px;
+
+	margin-left: auto;
+	margin-right: auto;	
+
+	top: 50%;
+	margin-top: -300px;	
+}
+
+.camada
+{
+	/*background: url(../imgs/fundo.png);*/
+	position: absolute;		
+	
+	width: 800px;
+	height: 600px;
+}
+
+#menu.camada{
+	background: url(../imgs/menu/dominode.png);
+}
+
+#jogo.camada {
+	background: url(../imgs/fundo.png);
+	z-index: 8;
+}
+
+.botaoMenu {
+	position: absolute;
+	width: 130px;
+	height: 51px;
+}
+
+#creditos.botaoMenu {
+	top: 390px;
+	left: 10px;
+	background: url(../imgs/menu/creditos_botao.png);
+}
+
+#creditos.botaoMenu:hover {
+	background: url(../imgs/menu/creditos_botao_selecionado.png);
+}
+
+#instrucoes.botaoMenu {
+	top: 500px;
+	left: 10px;
+	background: url(../imgs/menu/instrucoes_botao.png);
+}
+
+#instrucoes.botaoMenu:hover {
+	background: url(../imgs/menu/instrucoes_botao_selecionado.png);
+}
+
+#jogar.botaoMenu {
+	width: 93px;
+	height: 83px;
+	top: 430px;
+	left: 690px;
+	background: url(../imgs/menu/jogar_botao.png);
+}
+
+#jogar.botaoMenu:hover {
+	background: url(../imgs/menu/jogar_botao_selecionado.png);
+}
+
+#animacao {
+	position: absolute;
+	top: 330px;
+	left: 140px;
+	width: 519px;
+	height: 234px;
+}
+
+#ajusteDaAnimacao {
+	position: absolute;
+	top: 35px;
+	left: 35px;
+	width: 450px;
+	height: 170px;
+}
+
+.insideFolder {
+	width: 680px;
+	height: 445px;
+	overflow-y: auto;
+	position: absolute;
+	top: 100px;
+	left: 60px;
+}
+
+#tabs {
+	width: 800px;
+	height: 600px;
+	background: url(../imgs/lobby/fundo.png)
+}
+
+.abaLobby {
+	position: absolute;
+	top: 30px;
+	width: 226px;
+	height: 62px;
+}
+
+#lobby-aba.abaLobby {
+	left: 96px;
+	background: url(../imgs/lobby/aba_lobby.png);
+	z-index: 3;
+}
+
+#lobby-aba.abaLobby:hover {
+	z-index: 7 !important;		
+}
+
+#creditos-aba.abaLobby {
+	left: 284px;
+	z-index: 2;
+	background: url(../imgs/lobby/aba_creditos.png);
+}
+
+#creditos-aba.abaLobby:hover {
+	z-index: 7 !important;		
+}
+
+#instrucoes-aba.abaLobby {
+	left: 478px;
+	z-index: 1;
+	background: url(../imgs/lobby/aba_instrucoes.png);
+}
+	
+#instrucoes-aba.abaLobby:hover {
+	z-index: 7 !important;	
+}
+
+.selected
+{
+	z-index: 6 !important;
+}
+
+
+/* Animação da tela inicial */
+
+.lado {
+	-moz-transition-property: -moz-transform;
+	-moz-transition-duration: .3s;
+	-ms-transition-property: -ms-transform;
+	-ms-transition-duration: .3s;
+	-webkit-transition-property: -webkit-transfor;
+	-webkit-transition-duration: .3s;
+	transition-property: transform;
+	transition-duration: .3s;
+
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+#lado1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:  url(../imgs/menu/fracoes.png), url(../imgs/menu/fundo_titulo.png);
+
+	z-index: 10;
+}
+
+#lado1:hover {
+	background:  url(../imgs/menu/fracoes_selecionado.png), url(../imgs/menu/fundo_titulo.png);
+}
+
+#lado2 {
+	-moz-transform: rotate3d(0,1,0,-180deg);
+	-ms-transform: rotate3d(0,1,0,-180deg);
+	-webkit-transform: rotate3d(0,1,0,-180deg);
+	transform: rotate3d(0,1,0,-180deg);
+
+	z-index: 8;
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../imgs/menu/fundo_titulo.png);
+}
+
+#lado1.invertido {
+	-moz-transform: rotate3d(0,1,0,180deg);
+	-ms-transform: rotate3d(0,1,0,180deg);
+	-webkit-transform: rotate3d(0,1,0,180deg);
+	transform: rotate3d(0,1,0,180deg);
+	
+	z-index: 8;
+}
+
+#lado2.invertido {
+	-moz-transform: rotate3d(0,1,0,0deg);
+	-ms-transform: rotate3d(0,1,0,0deg);
+	-webkit-transform: rotate3d(0,1,0,0deg);
+	transform: rotate3d(0,1,0,0deg);
+	
+	z-index: 10;
+}
+
+#voltarBotaoAnimacao {
+	margin-top: -16px;
+	float: right;
+	width: 52px;
+	height: 36px;
+	background: url(../imgs/menu/voltar.png);
+}
+
+
+/* Tela de carregamento */
+
+#loading-game {
+	word-wrap: break-word;
+	position: absolute;
+	top: 200px;
+	left: 50px;
+	width: 700px;
+	font-size: 30px;
+}
+
+#animacaoTelaDeCarregamento {
+	position: absolute;
+	top: 300px;
+	left: 314px;
+	width: 72px;
+	height: 12px;
+	background: url(../imgs/tela_de_espera/Recicencias.gif);
+}
+
+
+/* Oculta o elemento de usuários videntes, mantendo o mesmo visível para leitores de tela.*/
+/* Parte dos plugins do jquery.accessWidgetToolkit. */
+.awt-hidden-accessible
+{
+    position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}

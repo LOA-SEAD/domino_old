@@ -1,0 +1,12 @@
+{
+	"name": "domino-of-fractions",
+	"description": "Jogo multiplayer de dominó desenvolvido a partir do projeto Laboratório de Objetos de Aprendizagem (LOA) da Universidade Federal de São Carlos. (UFSCar)", 
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "3.0.0rc4",
+		"socket.io": "0.9.10",
+		"winston": "0.6.2", 
+		"jade": "*"
+	}
+}

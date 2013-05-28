@@ -1,0 +1,38 @@
+﻿<section id="game-room" data-bind="visible: isActive">
+    <div id="jogo" class="camada">
+        <h2 class="awt-hidden-accessible">Sala de jogo</h2>
+        <div id="board"></div>
+
+        <div id="playersInformation">
+            <h3 class="awt-hidden-accessible">Jogadores na sala</h3> 
+            <ul data-bind="foreach: getPlayersInRoom">
+                <li data-bind="style: {color: isPlaying() ? 'green' : 'red' }">
+                    <span class="name" data-bind="text: name"></span>
+                    <span class="icon"></span>
+                    <span class="number-of-tiles" data-bind="text: numberOfTiles"></span>
+                 </li>
+        	</ul>
+        </div>
+
+        <div id="my-tiles">
+            <span class="awt-hidden-accessible">Minhas peças</span> 
+            <div data-bind="foreach: getPlayerTiles">
+                <div data-bind="attr: {id: 'tile-' + $data, class: 'tile'}">
+                    <span class="awt-hidden-accessible" data-bind="text: $data"></span>
+                </div>
+        	</div>
+        </div>
+        
+        <!--Alan, é para usar o aria-live no chat?-->
+        <div id="chat">
+            <span class="awt-hidden-accessible">Chat</span>
+            <div data-bind="foreach: getPlayerMessages">
+                <div data-bind="text: hi"></div>
+            </div>
+            <input id="inputChat" type="text"></input>
+            <div id="sendButton" data-bind="click: sendNewMessage">
+                <span class="awt-hidden-accessible">Enviar Mensagem</span>
+            </div>            
+        </div>
+    </div>
+</section>

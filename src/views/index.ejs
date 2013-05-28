@@ -1,0 +1,44 @@
+<% include head %>
+<div id="menu" class="camada">
+	<div id="animacao">
+		<div id="lado1" class="lado"></div>
+		<div id="lado2" class="lado">
+			<div id="ajusteDaAnimacao">
+				<h2> Acesso </h2>
+				<p> Para acessar o jogo, por favor, informe seu nome a seguir.</p>
+				<form action="/jogo" method="post">
+					<fieldset>
+						<label for="name">Nome: </label>
+						<input maxlength="20" type="text" id="name" name="name">		
+					</fieldset>
+					<input type="submit" value="Entrar">
+				</form>
+
+				<div id="voltarBotaoAnimacao">
+					<div class="awt-hidden-accessible">
+						Voltar Animacao
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+
+		$("#lado1.lado").click(function() {
+			$('#animacao').children().each(function() {
+				$(this).addClass('invertido');
+			});
+		});
+
+		$("#voltarBotaoAnimacao").click(function() {
+			$('#animacao').children().each(function() {
+				$(this).removeClass('invertido');
+			});
+		});
+
+		
+	</script>
+
+</div>
+<% include foot %>
